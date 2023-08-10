@@ -43,6 +43,7 @@ inquirer.prompt([
     let SVG = shape.renderSVG()
     
     fs.writeFileSync("./logo.svg", SVG)
+    console.log("Generated Logo.svg")
 })
 
 
