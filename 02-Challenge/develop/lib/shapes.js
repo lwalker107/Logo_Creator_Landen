@@ -26,4 +26,20 @@ class Circle extends Shape {
     }
 }
 
-module.exports = {Shape, Circle}
+class Triangle extends Shape {
+    constructor(shapeColor, shapeText, shapeTextColor) {
+        super()
+            this.shapeColor = shapeColor;
+            this.shapeText = shapeText;
+            this.shapeTextColor = shapeTextColor;
+    }
+
+    render() {
+        return `<polygon points="250, 20 300, 220 160, 210" fill="${this.shapeColor}" /><text x="240" y="175" font-size="60" text-anchor="middle" fill="${this.shapeTextColor}">${this.shapeText}</text>`
+    }
+}
+
+class Square extends Shape {
+    
+}
+module.exports = {Shape, Circle, Triangle}

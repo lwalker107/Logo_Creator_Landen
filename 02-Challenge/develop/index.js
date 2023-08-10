@@ -1,5 +1,5 @@
 const inquirer = require('inquirer')
-const {Shape, Circle} = require('./lib/shapes');
+const {Shape, Circle, Triangle} = require('./lib/shapes');
 const fs = require('fs');
 
 
@@ -30,6 +30,11 @@ inquirer.prompt([
     if (inquirerResponses.shape === 'circle') {
         shape = new Circle(inquirerResponses.shapeColor, inquirerResponses.brandInitials, inquirerResponses.textColor)
     }
+
+    if (inquirerResponses.shape === 'triangle') {
+        shape = new Triangle(inquirerResponses.shapeColor, inquirerResponses.brandInitials, inquirerResponses.textColor)
+    }
+
     shape.setShape(shape.render()) 
     let SVG = shape.renderSVG()
     
