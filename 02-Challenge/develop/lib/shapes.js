@@ -40,6 +40,15 @@ class Triangle extends Shape {
 }
 
 class Square extends Shape {
-    
+    constructor(shapeColor, shapeText, shapeTextColor) {
+        super()
+            this.shapeColor = shapeColor;
+            this.shapeText = shapeText;
+            this.shapeTextColor = shapeTextColor;
+    }
+
+    render() {
+        return `<rect x="50" y="20" width="150" height="150" fill="${this.shapeColor}" /><text x="125" y="125" font-size="60" text-anchor="middle" fill="${this.shapeTextColor}">${this.shapeText}</text>`
+    }
 }
-module.exports = {Shape, Circle, Triangle}
+module.exports = {Shape, Circle, Triangle, Square}
